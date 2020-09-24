@@ -107,25 +107,52 @@ header .btn-header .btn-explore {
   height: 800px;
   display: flex;
   flex-flow: column;
+  position: relative;
+  color: white;
+  text-shadow: 0 0 4px #00004a;
 }
 .contenido .categorias .plantas-decoradas {
-  width: 100%;
-  height: 390px;
-  display: flex;
-  flex-flow: row;
-  margin-bottom: 10px;
+  height: 100vh;
   background-image: url('/resources/img/bg-productos-decoradas.jpg');
   background-size: cover;
   background-position: center;
-  border: solid 2px #ff7e67;
   padding: 0px 70px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.contenido .categorias .plantas-decoradas h2 {
+  font-size: 50px;
+  margin-top: 150px;
+}
+.contenido .categorias .plantas-decoradas h3 {
+  font-size: 30px;
+}
+.contenido .categorias .plantas-decoradas .btn-plantas-decoradas {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  width: 200px;
+  border: solid 2px white;
+  border-radius: 17px;
+  cursor: pointer;
 }
 .contenido .categorias .otros {
   width: 100%;
   display: flex;
   flex-flow: row;
-  height: 390;
+  height: 390px;
   margin-top: 10px;
+}
+.contenido .categorias .otros h2 {
+  font-size: 45px;
+  margin-top: 180px;
+}
+.contenido .categorias .otros h3 {
+  font-size: 25px;
 }
 .contenido .categorias .otros .plantas {
   width: 33.3%;
@@ -134,6 +161,7 @@ header .btn-header .btn-explore {
   background-position: center;
   height: 390px;
   margin-right: 10px;
+  padding-left: 70px;
 }
 .contenido .categorias .otros .macetas {
   width: 33.3%;
@@ -142,6 +170,7 @@ header .btn-header .btn-explore {
   background-position: center;
   height: 390px;
   margin: 0px 10px;
+  padding-left: 70px;
 }
 .contenido .categorias .otros .kits {
   width: 33.3%;
@@ -150,4 +179,18 @@ header .btn-header .btn-explore {
   background-position: center;
   height: 390px;
   margin-left: 10px;
+  padding-left: 70px;
+}
+.contenido .categorias .otros .btn-plantas-categorias {
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  width: 120px;
+  border: solid 2px white;
+  border-radius: 17px;
+  cursor: pointer;
 }

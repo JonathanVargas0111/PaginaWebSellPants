@@ -14,15 +14,12 @@
 @img-bg-cactus: '/resources/img/bg-cactus.jpg';
 @img-bg-kits-piedras: '/resources/img/bg-kits-piedras.jpg';
 
-
-
 ///Defincion de los diferentes tamaños/fuentes
 ///Fuentes del header
 @font-size-nav:35px;
 @font-size-text-header:55px;
 
 ///Fuentes de categorias
-
 
 body{
     margin:0px;
@@ -138,24 +135,52 @@ header{
         height: 800px;        
         display: flex;
         flex-flow: column;
+        position: relative;
+        color: white;
+        text-shadow: 0 0 4px #00004a;
         .plantas-decoradas{
-            width: 100%;
-            height: 390px;
-            display: flex;
-            flex-flow: row;
-            margin-bottom: 10px;
-            background-image: url(@img-bg-productos-decoradas);
+            h2{
+                font-size: 50px;
+                margin-top: 150px;
+            }
+            h3{
+                font-size: 30px;
+            }
+            height: 100vh;
+            background-image: url(@img-bg-productos-decoradas);      
             background-size: cover;
-            background-position: center; 
-            border:solid 2px @color-cuatro;  
-            padding: 0px 70px;   
+            background-position: center;
+            padding: 0px 70px;
+            margin: 0px;
+            margin-bottom: 10px;              
+            .btn-plantas-decoradas{
+                color: white;
+                text-decoration:none;
+                padding:10px 10px;
+                font-size:25px;
+                font-weight: bold;
+                display: block;
+                text-align: center;
+                width: 200px;
+                border: solid 2px white;
+                border-radius: 17px;
+                cursor: pointer;
+            }
         }
         .otros{
             width: 100%;
             display: flex;
             flex-flow: row;
-            height: 390;
+            height: 390px;
             margin-top: 10px;
+            h2{
+                font-size: 45px;
+                margin-top: 180px;
+            }
+            h3{
+                font-size: 25px;
+            }
+
             .plantas{
                 width: 33.3%;
                 background-image: url(@img-bg-cactus);
@@ -163,6 +188,7 @@ header{
                 background-position: center;
                 height: 390px;
                 margin-right: 10px;
+                padding-left: 70px; 
             }
             .macetas{
                 width: 33.3%;
@@ -171,6 +197,8 @@ header{
                 background-position: center;
                 height: 390px;
                 margin: 0px 10px;
+                padding-left: 70px; 
+
             } .kits{ 
                 width: 33.3%;
                 background-image: url(@img-bg-macetas);
@@ -178,7 +206,27 @@ header{
                 background-position: center;
                 height: 390px;
                 margin-left: 10px;
+                padding-left: 70px; 
+
+            }
+            
+            .btn-plantas-categorias{
+                color: white;
+                text-decoration:none;
+                padding:10px 10px;
+                font-size:20px;
+                font-weight: bold;
+                display: block;
+                text-align: center;
+                width: 120px;
+                border: solid 2px white;
+                border-radius: 17px;
+                cursor: pointer;
             }
         }
     }
+
+    
+
+    
 }
