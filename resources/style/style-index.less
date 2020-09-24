@@ -24,11 +24,12 @@
 ///Font-size titulos
 @font-size-titulo-seccion: 60px;
 //Font size subtitulos
-@font-size-subtitulo-seccion: 20px;
+@font-size-subtitulo-seccion: 30px;
 
 
 body{
     margin:0px;
+    background-color: @color-uno;
 }
 
 header{
@@ -214,8 +215,7 @@ header{
                 margin-left: 10px;
                 padding-left: 70px; 
 
-            }
-            
+            }            
             .btn-plantas-categorias{
                 color: white;
                 text-decoration:none;
@@ -231,7 +231,6 @@ header{
             }
         }
     }
-
     .producto-destacados{        
         text-align: center;
         margin-top: 70px;
@@ -285,7 +284,108 @@ header{
             }
         }
     }
-
+    .tips{
+        text-align: center;
+        margin-top: 50px;        
+        h2{
+            color: @color-tres;
+            font-size: @font-size-titulo-seccion;
+        }
+        h3{
+            color: @color-cuatro;
+            font-size: @font-size-subtitulo-seccion;
+        }
+        .lista-tips{
+            display: flex;
+            flex-flow:row;
+            .tip{
+                width: 50%;
+                border: solid 4px white;
+                padding: 0px;
+                .caja-img{
+                    height: 300px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .caja-informacion{
+                    height: 300px;
+                    padding: 0px 40px;
+                    h3{
+                        font-size: 50px;
+                        margin: 0px;
+                    }
+                    p{
+                        font-size: 25px;
+                        color: @color-tres;
+                        margin: 0px;
+                    }
+                    .btn-tips{
+                        justify-content: center;
+                        margin: 10px;
+                        .btn-vermas{
+                            color: @color-cuatro;
+                            border: solid 2px @color-cuatro;
+                            text-decoration:none;
+                            padding:5px 20px;
+                            font-size:17px;
+                            font-weight: bold;
+                            text-align: center;
+                            border-radius: 10px;            
+                        }
+                    }
+                }
+            }
+            .tips-dos {
+                width: 50%;
+                display: flex;
+                flex-flow:column;
+                height: 600px;
+                .tip-dos{
+                    border: solid 2px white;
+                    display: flex;
+                    flex-flow: row;
+                    height: 300px;
+                    .caja-img{
+                        width: 50%;
+                        background-color: red;    
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .caja-texto{
+                        width: 50%;
+                        padding: 0px 10px;                        
+                        h3{
+                            font-size: 25px;
+                        }
+                        p{
+                            font-size: 15px;
+                            color:@color-tres;
+                        }
+                        .btn-tips{
+                            justify-content: center;
+                            bottom: 10px;
+                            .btn-vermas-tips{
+                                color: @color-cuatro;
+                                border: solid 2px @color-cuatro;
+                                text-decoration:none;
+                                padding:5px 20px;
+                                font-size:17px;
+                                font-weight: bold;
+                                text-align: center;
+                                border-radius: 10px;            
+                            }
+                        }
+                    }
+                    
+                }              
+            }
+            
+        }
+    }
     .siguenos{        
         text-align: center;
         margin-top: 70px;
@@ -313,8 +413,8 @@ header{
                     background-size: cover;
                     background-position: center;
                 }
+                
             }
         }
-    }
-    
+    }    
 }
