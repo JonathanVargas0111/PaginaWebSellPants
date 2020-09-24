@@ -244,3 +244,32 @@ header .btn-header .btn-explore {
   font-weight: bold;
   font-size: 20px;
 }
+.contenido .siguenos {
+  text-align: center;
+  margin-top: 70px;
+}
+.contenido .siguenos h2 {
+  margin: auto;
+  color: #006A71;
+  font-size: 60px;
+}
+.contenido .siguenos h3 {
+  font-size: 25px;
+  color: #ff7e67;
+}
+.contenido .siguenos .lista-publicaciones {
+  display: flex;
+  flex-flow: row;
+  margin-top: 50px;
+}
+.contenido .siguenos .lista-publicaciones .publicacion {
+  width: 25%;
+  text-align: center;
+  padding: 0px 10px;
+}
+.contenido .siguenos .lista-publicaciones .publicacion img {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
