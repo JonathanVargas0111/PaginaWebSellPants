@@ -6,13 +6,13 @@
 
 //Imagenes que se van usar como fondos
 ///Imagen fondo header
-@img-bg-header: '/resources/img/bg-header.jpg';
+@img-bg-header: '../img/bg-header.jpg';
 
 ///Umagenes background categorias
-@img-bg-productos-decoradas: '/resources/img/bg-productos-decoradas.jpg';
-@img-bg-macetas: '/resources/img/bg-macetas.jpg';
-@img-bg-cactus: '/resources/img/bg-cactus.jpg';
-@img-bg-kits-piedras: '/resources/img/bg-kits-piedras.jpg';
+@img-bg-productos-decoradas: '../img/bg-productos-decoradas.jpg';
+@img-bg-macetas: '../img/bg-macetas.jpg';
+@img-bg-cactus: '../img/bg-cactus.jpg';
+@img-bg-kits-piedras: '../img/bg-kits-piedras.jpg';
 
 ///Defincion de los diferentes tamaños/fuentes
 ///Fuentes del header
@@ -20,6 +20,12 @@
 @font-size-text-header:55px;
 
 ///Fuentes de categorias
+
+///Font-size titulos
+@font-size-titulo-seccion: 60px;
+//Font size subtitulos
+@font-size-subtitulo-seccion: 20px;
+
 
 body{
     margin:0px;
@@ -226,7 +232,59 @@ header{
         }
     }
 
-    
+    .producto-destacados{        
+        text-align: center;
+        margin-top: 70px;
+        h2{            
+            margin:auto; 
+            color: @color-tres;               
+            font-size:@font-size-titulo-seccion ;     
+        }
+        .menu-destacados{
+            margin-top: 20px;
+            ul{                          
+                display: flex;                
+                flex-flow: row;
+                justify-content: center;
+                list-style-type: none; 
+                padding: 0px;                       
+                li{
+                    a{
+                        color: @color-cuatro;
+                        font-size: @font-size-subtitulo-seccion;                  
+                        padding: 5px 20px;                    
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+        }
+        .lista-productos-destacados{
+            display: flex;
+            flex-flow: row;
+            margin-top: 50px;
+            .producto-destacado{
+                width: 25%;            
+                text-align: center;
+                padding: 0px 10px;
+                img{
+                    width: 100%;
+                    height:400px;
+                    background-size: cover;
+                    background-position: center;
+                }
+                h3{
+                    font-size: 25px;
+                }
+                p{
+                    color: @color-tres;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 
     
 }
