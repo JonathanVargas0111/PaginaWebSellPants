@@ -1,0 +1,184 @@
+//Defincion paleta de colores
+@color-uno:#ecf4f3;
+@color-dos:#68B0AB;
+@color-tres: #006A71;
+@color-cuatro:#ff7e67;
+
+//Imagenes que se van usar como fondos
+///Imagen fondo header
+@img-bg-header: '/resources/img/bg-header.jpg';
+
+///Umagenes background categorias
+@img-bg-productos-decoradas: '/resources/img/bg-productos-decoradas.jpg';
+@img-bg-macetas: '/resources/img/bg-macetas.jpg';
+@img-bg-cactus: '/resources/img/bg-cactus.jpg';
+@img-bg-kits-piedras: '/resources/img/bg-kits-piedras.jpg';
+
+
+
+///Defincion de los diferentes tamaños/fuentes
+///Fuentes del header
+@font-size-nav:35px;
+@font-size-text-header:55px;
+
+///Fuentes de categorias
+
+
+body{
+    margin:0px;
+}
+
+header{
+    height: 100vh;
+    background-image: url(@img-bg-header);
+    background-size: cover;
+    background-position: center;
+    padding: 0px 70px;
+    margin: 0px;
+    /////////Inicio header
+    nav{
+        display: flex;
+        flex-flow:row;
+        align-items: center;
+        width: 100%;
+        padding: 50px 0px;
+        a{
+            color: white;
+            text-decoration: none;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+        }
+        .logo{
+            width: 60%;
+            font-weight: bold;
+            min-width: 600px;
+            display: flex;
+            flex-flow: row;            
+            .img-logo{
+                img{
+                    height: 100px;
+                }
+            }
+            .text-logo{
+                margin-left: 40px;
+                font-size: 60px;
+                color: @color-dos;
+            }            
+        }
+        .menu{
+            width: 30%;        
+            ul{
+                display: flex;
+                flex-flow: row;
+                list-style-type: none;
+                margin: 0px;
+                padding: 0px;
+                text-align: right;
+                a{
+                    color: @color-tres;
+                    margin: 0px 10px;
+                    padding: 5px 10px;
+                    font-size: @font-size-nav;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+        .leng{
+            width: 10%;
+            font-size:27px;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center ;
+            a{
+                color: @color-tres;
+                margin: 0px 10px;
+                padding: 5px 10px;
+                font-size: 20px;
+            }
+        }
+    }
+    ////// Header center
+    .centro-header{
+        display: flex;
+        flex-flow: row;
+        height: 60%;
+        .header-text{
+            width: 100%;
+            font-size:@font-size-text-header;
+            font-weight: bold;
+            color:white;
+        }
+    }
+    .btn-header{
+        width: 50%;
+        padding-left: 6%;
+        .btn-explore{
+            background-color:@color-dos;
+            color: white;
+            text-decoration:none;
+            padding:17px 70px;
+            font-size:30px;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            width: 150px;
+            margin-bottom: 30px;
+            border-radius: 10px;            
+        }
+    }
+}
+
+.contenido{    
+    margin-top: 70px;
+    padding: 0px 70px;
+    .categorias{
+        width: 100%;
+        height: 800px;        
+        display: flex;
+        flex-flow: column;
+        .plantas-decoradas{
+            width: 100%;
+            height: 390px;
+            display: flex;
+            flex-flow: row;
+            margin-bottom: 10px;
+            background-image: url(@img-bg-productos-decoradas);
+            background-size: cover;
+            background-position: center; 
+            border:solid 2px @color-cuatro;  
+            padding: 0px 70px;   
+        }
+        .otros{
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            height: 390;
+            margin-top: 10px;
+            .plantas{
+                width: 33.3%;
+                background-image: url(@img-bg-cactus);
+                background-size: cover;
+                background-position: center;
+                height: 390px;
+                margin-right: 10px;
+            }
+            .macetas{
+                width: 33.3%;
+                background-image: url(@img-bg-macetas);
+                background-size: cover;
+                background-position: center;
+                height: 390px;
+                margin: 0px 10px;
+            } .kits{ 
+                width: 33.3%;
+                background-image: url(@img-bg-macetas);
+                background-size: cover;
+                background-position: center;
+                height: 390px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
