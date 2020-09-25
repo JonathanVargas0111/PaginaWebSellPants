@@ -1,40 +1,40 @@
 //Defincion paleta de colores
-@color-uno:#ecf4f3;
-@color-dos:#68B0AB;
-@color-tres: #006A71;
-@color-cuatro:#ff7e67;
+$color-uno:#ecf4f3;
+$color-dos:#68B0AB;
+$color-tres: #006A71;
+$color-cuatro:#ff7e67;
 
 //Imagenes que se van usar como fondos
 ///Imagen fondo header
-@img-bg-header: '../img/bg-header.jpg';
+$img-bg-header: '../img/bg-header.jpg';
 
 ///Umagenes background categorias
-@img-bg-productos-decoradas: '../img/bg-productos-decoradas.jpg';
-@img-bg-macetas: '../img/bg-macetas.jpg';
-@img-bg-cactus: '../img/bg-cactus.jpg';
-@img-bg-kits-piedras: '../img/bg-kits-piedras.jpg';
+$img-bg-productos-decoradas: '../img/bg-productos-decoradas.jpg';
+$img-bg-macetas: '../img/bg-macetas.jpg';
+$img-bg-cactus: '../img/bg-cactus.jpg';
+$img-bg-kits-piedras: '../img/bg-kits-piedras.jpg';
 
 ///Defincion de los diferentes tamaños/fuentes
 ///Fuentes del header
-@font-size-nav:35px;
-@font-size-text-header:55px;
+$font-size-nav:35px;
+$font-size-text-header:55px;
 
 ///Fuentes de categorias
 
 ///Font-size titulos
-@font-size-titulo-seccion: 60px;
+$font-size-titulo-seccion: 60px;
 //Font size subtitulos
-@font-size-subtitulo-seccion: 30px;
+$font-size-subtitulo-seccion: 30px;
 
 
 body{
     margin:0px;
-    background-color: @color-uno;
+    background-color: $color-uno;
 }
 
 header{
     height: 100vh;
-    background-image: url(@img-bg-header);
+    background-image: url($img-bg-header);
     background-size: cover;
     background-position: center;
     padding: 0px 70px;
@@ -67,7 +67,7 @@ header{
             .text-logo{
                 margin-left: 40px;
                 font-size: 60px;
-                color: @color-dos;
+                color: $color-dos;
             }            
         }
         .menu{
@@ -80,10 +80,10 @@ header{
                 padding: 0px;
                 text-align: right;
                 a{
-                    color: @color-tres;
+                    color: $color-tres;
                     margin: 0px 10px;
                     padding: 5px 10px;
-                    font-size: @font-size-nav;
+                    font-size: $font-size-nav;
                     font-weight: bold;
                     cursor: pointer;
                 }
@@ -96,7 +96,7 @@ header{
             justify-content: flex-end;
             align-items: center ;
             a{
-                color: @color-tres;
+                color: $color-tres;
                 margin: 0px 10px;
                 padding: 5px 10px;
                 font-size: 20px;
@@ -110,7 +110,7 @@ header{
         height: 60%;
         .header-text{
             width: 100%;
-            font-size:@font-size-text-header;
+            font-size:$font-size-text-header;
             font-weight: bold;
             color:white;
         }
@@ -119,7 +119,7 @@ header{
         width: 50%;
         padding-left: 6%;
         .btn-explore{
-            background-color:@color-dos;
+            background-color:$color-dos;
             color: white;
             text-decoration:none;
             padding:17px 70px;
@@ -154,7 +154,7 @@ header{
                 font-size: 30px;
             }
             height: 100vh;
-            background-image: url(@img-bg-productos-decoradas);      
+            background-image: url($img-bg-productos-decoradas);      
             background-size: cover;
             background-position: center;
             padding: 0px 70px;
@@ -190,7 +190,7 @@ header{
 
             .plantas{
                 width: 33.3%;
-                background-image: url(@img-bg-cactus);
+                background-image: url($img-bg-cactus);
                 background-size: cover;
                 background-position: center;
                 height: 390px;
@@ -199,7 +199,7 @@ header{
             }
             .macetas{
                 width: 33.3%;
-                background-image: url(@img-bg-macetas);
+                background-image: url($img-bg-macetas);
                 background-size: cover;
                 background-position: center;
                 height: 390px;
@@ -208,7 +208,7 @@ header{
 
             } .kits{ 
                 width: 33.3%;
-                background-image: url(@img-bg-macetas);
+                background-image: url($img-bg-macetas);
                 background-size: cover;
                 background-position: center;
                 height: 390px;
@@ -236,8 +236,8 @@ header{
         margin-top: 70px;
         h2{            
             margin:auto; 
-            color: @color-tres;               
-            font-size:@font-size-titulo-seccion ;     
+            color: $color-tres;               
+            font-size:$font-size-titulo-seccion ;     
         }
         .menu-destacados{
             margin-top: 20px;
@@ -249,8 +249,8 @@ header{
                 padding: 0px;                       
                 li{
                     a{
-                        color: @color-cuatro;
-                        font-size: @font-size-subtitulo-seccion;                  
+                        color: $color-cuatro;
+                        font-size: $font-size-subtitulo-seccion;                  
                         padding: 5px 20px;                    
                         font-weight: bold;
                         cursor: pointer;
@@ -277,7 +277,7 @@ header{
                     font-size: 25px;
                 }
                 p{
-                    color: @color-tres;
+                    color: $color-tres;
                     font-weight: bold;
                     font-size: 20px;
                 }
@@ -288,12 +288,12 @@ header{
         text-align: center;
         margin-top: 50px;        
         h2{
-            color: @color-tres;
-            font-size: @font-size-titulo-seccion;
+            color: $color-tres;
+            font-size: $font-size-titulo-seccion;
         }
         h3{
-            color: @color-cuatro;
-            font-size: @font-size-subtitulo-seccion;
+            color: $color-cuatro;
+            font-size: $font-size-subtitulo-seccion;
         }
         .lista-tips{
             display: flex;
@@ -318,15 +318,15 @@ header{
                     }
                     p{
                         font-size: 25px;
-                        color: @color-tres;
+                        color: $color-tres;
                         margin: 0px;
                     }
                     .btn-tips{
                         justify-content: center;
                         margin: 10px;
                         .btn-vermas{
-                            color: @color-cuatro;
-                            border: solid 2px @color-cuatro;
+                            color: $color-cuatro;
+                            border: solid 2px $color-cuatro;
                             text-decoration:none;
                             padding:5px 20px;
                             font-size:17px;
@@ -363,14 +363,14 @@ header{
                         }
                         p{
                             font-size: 15px;
-                            color:@color-tres;
+                            color:$color-tres;
                         }
                         .btn-tips{
                             justify-content: center;
                             bottom: 10px;
                             .btn-vermas-tips{
-                                color: @color-cuatro;
-                                border: solid 2px @color-cuatro;
+                                color: $color-cuatro;
+                                border: solid 2px $color-cuatro;
                                 text-decoration:none;
                                 padding:5px 20px;
                                 font-size:17px;
@@ -386,17 +386,31 @@ header{
             
         }
     }
+
+    .about{
+        text-align: center;        
+        margin: 20px;
+        h2{
+            font-size: $font-size-titulo-seccion;
+            color:$color-cuatro;            
+        }
+        p{
+            justify-content: center;
+            font-size: 30px;
+            color:$color-tres
+        }
+    }
     .siguenos{        
         text-align: center;
         margin-top: 70px;
         h2{            
             margin:auto; 
-            color: @color-tres;               
-            font-size:@font-size-titulo-seccion ;     
+            color: $color-tres;               
+            font-size:$font-size-titulo-seccion ;     
         }
         h3{
             font-size: 25px;
-            color: @color-cuatro;
+            color: $color-cuatro;
         }
         
         .lista-publicaciones{
