@@ -259,9 +259,10 @@ header{
                 width: 25%;            
                 text-align: center;
                 padding: 0px 10px;
+                height:400px;
                 img{
                     width: 100%;
-                    height:400px;
+                    height: 100%;
                     background-size: cover;
                     background-position: center;
                 }
@@ -294,6 +295,7 @@ header{
                 width: 50%;
                 border: solid 4px white;
                 padding: 0px;
+                box-sizing: border-box;
                 .caja-img{
                     height: 300px;
                     img{
@@ -521,6 +523,7 @@ footer{
         .centro-header{
             h1{
                 margin: 120px 0px;
+                font-size: 80px;
             }
         }
         .btn-header{
@@ -560,11 +563,11 @@ footer{
         .centro-header{
             h1{
                 margin: 120px 0px;
-                font-size: 40px;
+                font-size: 70px;
             }
         }
         .btn-header{
-            margin-top: 120px;
+            margin-top: 90px;
         }
     }
     .contenido{
@@ -593,4 +596,145 @@ footer{
         } 
         }
     }
+    footer{
+        .footer-informacion{
+            .menu-footer{
+                text-align: right;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    header{
+        height: 500px;
+        nav{
+            padding: 10px 30px;           
+            .logo{
+                align-items: center;
+                a{
+                    font-size: 25px;
+                }
+            }
+            .menu{
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+        .centro-header{
+            h1{
+                margin: 80px 0px;   
+                font-size: 65px;
+            }
+        }
+        .btn-header{
+            margin-top: 90px;
+        }
+    }
+    .contenido{
+        padding: 0px 30px;
+        .categorias{
+            .plantas-decoradas{
+                padding-left: 20px;
+            }
+            .otros{
+                div{
+                    padding-left: 10px;
+                    h2{
+                        margin-top: 120;
+                        font-size: 35px;
+                    }
+                    h3{
+                        font-size: 15px;
+                    }
+                }
+                .plantas{       
+                    margin-right: 5px;
+                }
+                .macetas{                
+                    margin: 0px 5px;
+                } 
+                .kits{ 
+                    margin-left: 5px;
+                } 
+            }
+        }
+        .producto-destacados {
+            .menu-destacados{
+                ul{                         
+                    li{
+                        a{
+                            font-size: 28px;
+                        }
+                    }
+                    
+                }
+            }
+            .lista-productos-destacados{
+                .producto-destacado{              
+                img{
+                    height:250px;
+                }
+                h3{
+                    font-size: 25px;
+                }
+                p{
+                    color: $color-tres;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                }
+            }
+        }
+        .tips{
+            text-align: center;
+            margin-top: 20px;
+            .lista-tips{
+                display: flex;
+                flex-flow:column;
+                .tip{
+                    width: 100%; 
+                    .caja-informacion{
+                        h3{font-size: 40px;
+                        }
+                    }  
+                }
+                .tips-dos {
+                    width: 100%;                 
+                }
+                
+            }
+        }
+        .about{
+            div{
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+        .siguenos{
+            .lista-publicaciones{
+                .publicacion{
+                    height: 250px;
+                }
+            } 
+            }
+        }
+        footer{
+            .footer-informacion{
+                padding: 30px;
+                .logo{
+                    display: none;
+                }
+                div{
+                    width: 25%;
+                }
+                .menu-footer{
+                    text-align: right;
+                }
+            }
+            
+        }
 }
