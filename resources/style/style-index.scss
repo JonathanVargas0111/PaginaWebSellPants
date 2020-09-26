@@ -103,15 +103,19 @@ header{
         .header-text{
             box-sizing: border-box;
             width: 100%;
-            font-size:$font-size-text-header;
-            font-weight: bold;
-            color:white;
+            h1{
+                font-size: 120px;
+                font-weight: bold;
+                color:white;
+                margin-top: 140px;
+            }
         }
     }
     .btn-header{
         box-sizing: border-box;
         width: 50%;
         padding-left: 6%;
+        margin-top: 80px;
         .btn-explore{
             background-color:$color-dos;
             color: white;
@@ -252,7 +256,7 @@ header{
         }
         .lista-productos-destacados{
             display: flex;
-            flex-flow: row;
+            flex-flow: row wrap;
             margin-top: 50px;
             .producto-destacado{
                 box-sizing: border-box;
@@ -407,9 +411,10 @@ header{
         }        
         .lista-publicaciones{
             display: flex;
-            flex-flow: row;
+            flex-flow: row wrap;
             margin-top: 50px;
             .publicacion{
+                box-sizing: border-box;
                 width: 25%;            
                 text-align: center;
                 padding: 0px 10px;
@@ -419,8 +424,7 @@ header{
                     height: 100%;                   
                     background-size: cover;
                     background-position: center;
-                }
-                
+                }                
             }
         }
     }  
@@ -561,10 +565,12 @@ footer{
     header{
         height: 60vh;
         .centro-header{
-            h1{
-                margin: 120px 0px;
-                font-size: 70px;
-            }
+            .header-text{
+                h1{
+                    margin: 120px 0px;
+                    font-size: 70px;
+                }
+            }            
         }
         .btn-header{
             margin-top: 90px;
@@ -624,10 +630,13 @@ footer{
             }
         }
         .centro-header{
-            h1{
-                margin: 80px 0px;   
-                font-size: 65px;
+            .header-text{
+                h1{
+                    margin: 80px 0px;   
+                    font-size: 65px;
+                }
             }
+            
         }
         .btn-header{
             margin-top: 90px;
@@ -737,4 +746,241 @@ footer{
             }
             
         }
+}
+/////Oculta los menus en resoluciones altas
+#toggle{
+    display:none;
+}
+.res-menu{
+    display: none;
+}
+@media (min-width: 320px) and (max-width: 768px){  
+    .res-menu{
+        display: flex;
+        font-size: 50px;
+        color: white;
+        user-select:none;
+    }
+    header{
+        padding: 10px ;
+        height: fit-content;
+        nav{
+            padding: 0px 10px;
+            flex-flow: column;
+            .logo{
+                display: flex;
+                align-items: center;
+                a{
+                    font-size: 30px;
+                }
+            }
+            .menu{
+                display: none;
+                background-color:$color-uno;
+                padding-top: 5px;
+                ul{
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                    li{
+                        width: 100%;
+                        text-align: center;
+                        border-bottom: 3px solid rgb(255, 255, 255);
+                        padding: 10px 0px;                        
+                        a{
+                            justify-content: center;
+                            padding: 14px 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .centro-header{
+            text-align: center;
+            padding: 10px 10px;
+            h1{
+                margin-bottom: 10px;   
+                font-size: 65px;
+            }
+        }
+        .btn-header{
+            display: none;
+        }
+    }
+    .contenido{
+        margin-top: 20px;
+        padding: 0px 30px;
+        .categorias{
+            .plantas-decoradas{
+                box-sizing: border-box;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                margin:0px;
+                h2{
+                    font-size: 45px;
+                    margin-top: 50px;   
+                }
+                h3{
+                    font-size: 25px;
+                }                
+            }
+            .otros{
+                box-sizing: border-box;
+                height: auto;
+                flex-flow: column;
+                margin: 0px;
+                div{                   
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: auto;                    
+                    padding: 20px;
+                    h2{
+                        font-size: 45px;
+                        margin-top: 50px;   
+                    }
+                    h3{
+                        font-size: 25px;
+                    }  
+                }
+                .plantas{
+                    margin: 0px;
+                }
+                .macetas{
+                    margin: 0px;
+                }
+                .kits{
+                    margin:0px;
+                }
+            }
+        }
+        .producto-destacados {
+            .menu-destacados{
+                margin-top: 20px;
+                ul{                          
+                    display: flex;                
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    list-style-type: none; 
+                    padding: 0px;                       
+                    li{
+                        box-sizing: border-box;
+                        width: 49%;
+                        margin-bottom: 30px;                        
+                        margin: 2px;
+                        margin-bottom: 20px;
+                        a{
+                            color: $color-cuatro;
+                            font-size: 25px;                  
+                            padding: 5px 20px;                    
+                            font-weight: bold;                         
+                        }
+                    }
+                    
+                }
+            }
+            .lista-productos-destacados{
+                margin-top: 10px;
+                .producto-destacado{ 
+                    height: 350px;
+                    width: 50%;             
+                img{
+                    height:250px;
+                }
+                h3{
+                    font-size: 25px;
+                    margin: 10px;
+                }
+                p{
+                    color: $color-tres;
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin: 10px;
+                }
+                }
+            }
+        }
+        .tips{
+            text-align: center;
+            margin-top: 20px;
+            h2{
+                margin-bottom:15px ;
+            }
+            h3{
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+            .lista-tips{
+                display: flex;
+                flex-flow:column;
+                .tip{
+                    width: 100%; 
+                    .caja-informacion{
+                        h3{font-size: 40px;
+                        }
+                    }  
+                }
+                .tips-dos {
+                    display: none;
+                    width: 100%;              
+                }
+                
+            }
+        }
+        .about{
+            h2{
+                margin-bottom:15px ;
+            }
+            div{
+                p{
+                    font-size: 20px;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .siguenos{
+            h2{
+                margin-bottom:15px ;
+            }
+            h3{
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+            .lista-publicaciones{
+                margin: 0px;
+                .publicacion{
+                    width: 50%;
+                    height: 250px;
+                    margin-bottom: 20px;
+                }
+            } 
+        }
+        }
+        footer{
+            .footer-informacion{
+                padding: 30px;
+                .logo{
+                    display: none;
+                }
+                div{
+                    width: 33.3%;
+                }
+                .menu-footer{
+                    text-align: right;
+                    display: none;
+                }
+            }
+            
+        }
+}
+
+//////Revisar si esta seleccionado/Marcado  
+#toggle:checked ~ .menu{
+    display: flex;
+    width: 200%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
