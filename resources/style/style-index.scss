@@ -491,16 +491,6 @@ footer{
                 font-size: 30px;
             }
         } 
-        /* .metodos-pago{
-            width: 20%;            
-        }
-        .siguenos{
-            width: 20%;  
-        }
-        .contacto{
-            width: 20%;
-        }
-        */
 
     }
     .copy-right{
@@ -525,9 +515,11 @@ footer{
     header{
         height: 80vh;
         .centro-header{
-            h1{
-                margin: 120px 0px;
-                font-size: 80px;
+            .header-text{
+                h1{
+                    margin: 100px 0px;
+                    font-size: 110px;
+                }
             }
         }
         .btn-header{
@@ -564,6 +556,15 @@ footer{
 @media (min-width: 992px) and (max-width: 1199px){
     header{
         height: 60vh;
+        nav{
+            .logo{
+                .img-logo{
+                    img{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
         .centro-header{
             .header-text{
                 h1{

@@ -477,16 +477,6 @@ footer .footer-informacion {
   display: flex;
   flex-flow: row wrap;
   color: white;
-  /* .metodos-pago{
-            width: 20%;            
-        }
-        .siguenos{
-            width: 20%;  
-        }
-        .contacto{
-            width: 20%;
-        }
-        */
 }
 
 footer .footer-informacion div {
@@ -565,9 +555,9 @@ footer .copy-right h3 {
   header {
     height: 80vh;
   }
-  header .centro-header h1 {
-    margin: 120px 0px;
-    font-size: 80px;
+  header .centro-header .header-text h1 {
+    margin: 100px 0px;
+    font-size: 110px;
   }
   header .btn-header {
     margin-top: 100px;
@@ -592,6 +582,9 @@ footer .copy-right h3 {
 @media (min-width: 992px) and (max-width: 1199px) {
   header {
     height: 60vh;
+  }
+  header nav .logo .img-logo img {
+    margin-left: 20px;
   }
   header .centro-header .header-text h1 {
     margin: 120px 0px;
