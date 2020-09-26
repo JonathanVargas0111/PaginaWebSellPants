@@ -754,7 +754,7 @@ footer{
 .res-menu{
     display: none;
 }
-@media (min-width: 320px) and (max-width: 768px){  
+@media (min-width: 481px) and (max-width: 768px){  
     .res-menu{
         display: flex;
         font-size: 50px;
@@ -799,17 +799,21 @@ footer{
         .centro-header{
             text-align: center;
             padding: 10px 10px;
-            h1{
-                margin-bottom: 10px;   
-                font-size: 65px;
+            .header-text{
+                h1{
+                    margin-top: 100px;
+                    margin-bottom: 10px;   
+                    font-size: 50px;
+                }
             }
+            
         }
         .btn-header{
             display: none;
         }
     }
     .contenido{
-        margin-top: 20px;
+        margin-top: 5px;
         padding: 0px 30px;
         .categorias{
             .plantas-decoradas{
@@ -919,11 +923,13 @@ footer{
                     .caja-informacion{
                         h3{font-size: 40px;
                         }
+                        p{
+                            font-size: 18px;
+                        }
                     }  
                 }
                 .tips-dos {
-                    display: none;
-                    width: 100%;              
+                    display: none;             
                 }
                 
             }
@@ -959,13 +965,247 @@ footer{
         }
         }
         footer{
+            padding: 5px;
             .footer-informacion{
                 padding: 30px;
                 .logo{
-                    display: none;
+                    width: 50%;
                 }
                 div{
-                    width: 33.3%;
+                    width: 50%;
+                }
+                .menu-footer{
+                    text-align: right;
+                    display: none;
+                }
+            }
+            
+        }
+}
+
+@media (min-width: 300px) and (max-width: 480px){  
+    .res-menu{
+        display: flex;
+        font-size: 50px;
+        color: white;
+        user-select:none;
+    }
+    header{
+        padding: 10px ;
+        height: fit-content;
+        nav{
+            padding: 0px 10px;
+            flex-flow: column;
+            .logo{
+                display: flex;
+                align-items: center;
+                a{
+                    font-size: 30px;
+                }
+            }
+            .menu{
+                display: none;
+                background-color:$color-uno;
+                padding-top: 5px;
+                ul{
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                    li{
+                        width: 100%;
+                        text-align: center;
+                        border-bottom: 3px solid rgb(255, 255, 255);
+                        padding: 10px 0px;                        
+                        a{
+                            justify-content: center;
+                            padding: 14px 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .centro-header{
+            text-align: center;
+            padding: 10px 10px;
+            .header-text{
+                h1{
+                    margin-top: 80px;
+                    margin-bottom: 10px;   
+                    font-size: 40px;
+                }
+            }
+            
+        }
+        .btn-header{
+            display: none;
+        }
+    }
+    .contenido{
+        margin-top: 5px;
+        padding: 0px 8px;
+        .categorias{
+            .plantas-decoradas{
+                box-sizing: border-box;
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                margin:0px;
+                h2{
+                    font-size: 45px;
+                    margin-top: 50px;   
+                }
+                h3{
+                    font-size: 25px;
+                }                
+            }
+            .otros{
+                box-sizing: border-box;
+                height: auto;
+                flex-flow: column;
+                margin: 0px;
+                div{                   
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: auto;                    
+                    padding: 20px;
+                    h2{
+                        font-size: 45px;
+                        margin-top: 50px;   
+                    }
+                    h3{
+                        font-size: 25px;
+                    }  
+                }
+                .plantas{
+                    margin: 0px;
+                }
+                .macetas{
+                    margin: 0px;
+                }
+                .kits{
+                    margin:0px;
+                }
+            }
+        }
+        .producto-destacados {
+            h2{
+                font-size: 50px;
+            }            
+            .menu-destacados{
+                margin-top: 20px;
+                ul{                          
+                    display: flex;                
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    list-style-type: none; 
+                    padding: 0px;                       
+                    li{
+                        box-sizing: border-box;
+                        width: 60%;
+                        margin-bottom: 30px;                        
+                        margin: 2px;
+                        margin-bottom: 20px;
+                        a{
+                            color: $color-cuatro;
+                            font-size: 15px;                  
+                            padding: 5px 20px;                    
+                            font-weight: bold; 
+                            border-bottom: solid 2px $color-cuatro;                        
+                        }
+                    }
+                    
+                }
+            }
+            .lista-productos-destacados{
+                margin-top: 10px;
+                .producto-destacado{ 
+                    height: 280px;
+                    width: 50%;             
+                img{
+                    height:150px;
+                }
+                h3{
+                    font-size: 25px;
+                    margin: 10px;
+                }
+                p{
+                    color: $color-tres;
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin: 10px;
+                }
+                }
+            }
+        }
+        .tips{
+            text-align: center;
+            margin-top: 20px;
+            h2{
+                margin-bottom:15px ;
+            }
+            h3{
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+            .lista-tips{
+                display: flex;
+                flex-flow:column;
+                .tip{
+                    width: 100%; 
+                    .caja-informacion{
+                        h3{font-size: 40px;
+                        }
+                        p{
+                            font-size: 18px;
+                        }
+                    }  
+                }
+                .tips-dos {
+                    display: none;             
+                }
+                
+            }
+        }
+        .about{
+            h2{
+                margin-bottom:15px ;
+            }
+            div{
+                p{
+                    font-size: 20px;
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .siguenos{
+            h2{
+                margin-bottom:15px ;
+            }
+            h3{
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+            .lista-publicaciones{
+                margin: 0px;
+                .publicacion{
+                    width: 50%;
+                    height: 250px;
+                    margin-bottom: 20px;
+                }
+            } 
+        }
+        }
+        footer{
+            padding: 5px;
+            .footer-informacion{
+                padding: 10px;
+                .logo{
+                    width: 50%;
+                }
+                div{
+                    width: 100%;
                 }
                 .menu-footer{
                     text-align: right;

@@ -728,7 +728,7 @@ footer .copy-right h3 {
   display: none;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .res-menu {
     display: flex;
     font-size: 50px;
@@ -775,15 +775,16 @@ footer .copy-right h3 {
     text-align: center;
     padding: 10px 10px;
   }
-  header .centro-header h1 {
+  header .centro-header .header-text h1 {
+    margin-top: 100px;
     margin-bottom: 10px;
-    font-size: 65px;
+    font-size: 50px;
   }
   header .btn-header {
     display: none;
   }
   .contenido {
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 0px 30px;
   }
   .contenido .categorias .plantas-decoradas {
@@ -892,9 +893,11 @@ footer .copy-right h3 {
   .contenido .tips .lista-tips .tip .caja-informacion h3 {
     font-size: 40px;
   }
+  .contenido .tips .lista-tips .tip .caja-informacion p {
+    font-size: 18px;
+  }
   .contenido .tips .lista-tips .tips-dos {
     display: none;
-    width: 100%;
   }
   .contenido .about h2 {
     margin-bottom: 15px;
@@ -919,14 +922,233 @@ footer .copy-right h3 {
     height: 250px;
     margin-bottom: 20px;
   }
+  footer {
+    padding: 5px;
+  }
   footer .footer-informacion {
     padding: 30px;
   }
   footer .footer-informacion .logo {
-    display: none;
+    width: 50%;
   }
   footer .footer-informacion div {
-    width: 33.3%;
+    width: 50%;
+  }
+  footer .footer-informacion .menu-footer {
+    text-align: right;
+    display: none;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+  .res-menu {
+    display: flex;
+    font-size: 50px;
+    color: white;
+    user-select: none;
+  }
+  header {
+    padding: 10px;
+    height: fit-content;
+  }
+  header nav {
+    padding: 0px 10px;
+    flex-flow: column;
+  }
+  header nav .logo {
+    display: flex;
+    align-items: center;
+  }
+  header nav .logo a {
+    font-size: 30px;
+  }
+  header nav .menu {
+    display: none;
+    background-color: #ecf4f3;
+    padding-top: 5px;
+  }
+  header nav .menu ul {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  header nav .menu ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid white;
+    padding: 10px 0px;
+  }
+  header nav .menu ul li a {
+    justify-content: center;
+    padding: 14px 0px;
+  }
+  header .centro-header {
+    text-align: center;
+    padding: 10px 10px;
+  }
+  header .centro-header .header-text h1 {
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+  header .btn-header {
+    display: none;
+  }
+  .contenido {
+    margin-top: 5px;
+    padding: 0px 8px;
+  }
+  .contenido .categorias .plantas-decoradas {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 0px;
+  }
+  .contenido .categorias .plantas-decoradas h2 {
+    font-size: 45px;
+    margin-top: 50px;
+  }
+  .contenido .categorias .plantas-decoradas h3 {
+    font-size: 25px;
+  }
+  .contenido .categorias .otros {
+    box-sizing: border-box;
+    height: auto;
+    flex-flow: column;
+    margin: 0px;
+  }
+  .contenido .categorias .otros div {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .contenido .categorias .otros div h2 {
+    font-size: 45px;
+    margin-top: 50px;
+  }
+  .contenido .categorias .otros div h3 {
+    font-size: 25px;
+  }
+  .contenido .categorias .otros .plantas {
+    margin: 0px;
+  }
+  .contenido .categorias .otros .macetas {
+    margin: 0px;
+  }
+  .contenido .categorias .otros .kits {
+    margin: 0px;
+  }
+  .contenido .producto-destacados h2 {
+    font-size: 50px;
+  }
+  .contenido .producto-destacados .menu-destacados {
+    margin-top: 20px;
+  }
+  .contenido .producto-destacados .menu-destacados ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0px;
+  }
+  .contenido .producto-destacados .menu-destacados ul li {
+    box-sizing: border-box;
+    width: 60%;
+    margin-bottom: 30px;
+    margin: 2px;
+    margin-bottom: 20px;
+  }
+  .contenido .producto-destacados .menu-destacados ul li a {
+    color: #ff7e67;
+    font-size: 15px;
+    padding: 5px 20px;
+    font-weight: bold;
+    border-bottom: solid 2px #ff7e67;
+  }
+  .contenido .producto-destacados .lista-productos-destacados {
+    margin-top: 10px;
+  }
+  .contenido .producto-destacados .lista-productos-destacados .producto-destacado {
+    height: 280px;
+    width: 50%;
+  }
+  .contenido .producto-destacados .lista-productos-destacados .producto-destacado img {
+    height: 150px;
+  }
+  .contenido .producto-destacados .lista-productos-destacados .producto-destacado h3 {
+    font-size: 25px;
+    margin: 10px;
+  }
+  .contenido .producto-destacados .lista-productos-destacados .producto-destacado p {
+    color: #006A71;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+  }
+  .contenido .tips {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .contenido .tips h2 {
+    margin-bottom: 15px;
+  }
+  .contenido .tips h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .contenido .tips .lista-tips {
+    display: flex;
+    flex-flow: column;
+  }
+  .contenido .tips .lista-tips .tip {
+    width: 100%;
+  }
+  .contenido .tips .lista-tips .tip .caja-informacion h3 {
+    font-size: 40px;
+  }
+  .contenido .tips .lista-tips .tip .caja-informacion p {
+    font-size: 18px;
+  }
+  .contenido .tips .lista-tips .tips-dos {
+    display: none;
+  }
+  .contenido .about h2 {
+    margin-bottom: 15px;
+  }
+  .contenido .about div p {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .contenido .siguenos h2 {
+    margin-bottom: 15px;
+  }
+  .contenido .siguenos h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .contenido .siguenos .lista-publicaciones {
+    margin: 0px;
+  }
+  .contenido .siguenos .lista-publicaciones .publicacion {
+    width: 50%;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  footer {
+    padding: 5px;
+  }
+  footer .footer-informacion {
+    padding: 10px;
+  }
+  footer .footer-informacion .logo {
+    width: 50%;
+  }
+  footer .footer-informacion div {
+    width: 100%;
   }
   footer .footer-informacion .menu-footer {
     text-align: right;
