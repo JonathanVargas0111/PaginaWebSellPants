@@ -1,0 +1,503 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: #ecf4f3;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked ~ .menu {
+  display: flex;
+  width: 100%;
+}
+
+header {
+  margin-bottom: 100px;
+}
+
+.menu {
+  display: none;
+}
+
+nav {
+  padding: 10px 30px;
+  flex-flow: column;
+  text-align: center;
+  background-color: #68B0AB;
+  box-sizing: border-box;
+  width: 100%;
+  /* hacemos que la cabecera ocupe el ancho completo de la página */
+  left: 0;
+  /* Posicionamos la cabecera al lado izquierdo */
+  top: 0;
+  /* Posicionamos la cabecera pegada arriba */
+  position: fixed;
+  /* Hacemos que la cabecera tenga una posición fija */
+  z-index: 100;
+}
+
+nav .logo a {
+  text-decoration: none;
+  font-size: 8vw;
+  color: #006A71;
+  font-weight: bold;
+}
+
+nav .res-menu {
+  display: flex;
+  display: inline-block;
+  margin: auto;
+  color: white;
+  font-size: 40px;
+  user-select: none;
+}
+
+nav .menu {
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+}
+
+nav .menu ul {
+  flex-flow: column;
+  list-style-type: none;
+}
+
+nav .menu ul li {
+  color: white;
+  border-bottom: 2px solid white;
+  padding: 10px 0px;
+}
+
+nav .menu ul li a {
+  font-size: 25px;
+}
+
+.productos-plantas {
+  margin-top: 50px;
+  padding: 0px 1px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.productos-plantas h2 {
+  font-size: 7vw;
+  padding: 10px;
+  color: #006A71;
+}
+
+.productos-plantas .lista-productos-plantas {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 10px;
+}
+
+.productos-plantas .lista-productos-plantas .producto-destacado {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  padding: 0px 5px;
+  margin-bottom: 25px;
+}
+
+.productos-plantas .lista-productos-plantas .producto-destacado img {
+  width: 100%;
+}
+
+.productos-plantas .lista-productos-plantas .producto-destacado h3 {
+  font-size: 5vw;
+}
+
+.productos-plantas .lista-productos-plantas .producto-destacado p {
+  font-size: 4vw;
+  color: #006A71;
+  font-weight: bold;
+}
+
+.productos-plantas .ver-mas a {
+  border: solid #ff7e67 2px;
+  border-radius: 12px;
+  color: #ff7e67;
+  text-decoration: none;
+  padding: 5px 25px;
+  cursor: pointer;
+}
+
+.producto-destacados {
+  padding: 0px 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin-top: 50px;
+}
+
+.producto-destacados h2 {
+  font-size: 6vw;
+  padding: 10px;
+  color: #006A71;
+}
+
+.producto-destacados .menu-destacados {
+  display: block;
+  width: 100%;
+  justify-content: right;
+}
+
+.producto-destacados .menu-destacados ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.producto-destacados .menu-destacados ul li {
+  width: 50%;
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.producto-destacados .menu-destacados ul li a {
+  font-size: 4vw;
+  border-bottom: solid 1px #006A71;
+  color: #ff7e67;
+}
+
+.producto-destacados .lista-productos-destacados {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 20px;
+}
+
+.producto-destacados .lista-productos-destacados .producto-destacado {
+  width: 25%;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  padding: 0px 10px;
+  margin-bottom: 25px;
+}
+
+.producto-destacados .lista-productos-destacados .producto-destacado img {
+  width: 100%;
+}
+
+.producto-destacados .lista-productos-destacados .producto-destacado h3 {
+  font-size: 3vw;
+}
+
+.producto-destacados .lista-productos-destacados .producto-destacado p {
+  font-size: 3vw;
+  color: #006A71;
+  font-weight: bold;
+}
+
+footer .footer-informacion {
+  padding: 20px 10px;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #006A71;
+  color: white;
+}
+
+footer .footer-informacion div {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer .footer-informacion div h3 {
+  margin-bottom: 10px;
+}
+
+footer .footer-informacion div ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+footer .footer-informacion div ul li {
+  font-size: 3.3vw;
+}
+
+footer .footer-informacion div a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .footer-informacion .logo {
+  display: none;
+}
+
+footer .footer-informacion .menu-footer a {
+  font-size: 20px;
+}
+
+footer .copy-right {
+  text-align: center;
+  background-color: gray;
+  padding: 5px;
+}
+
+@media (min-width: 480px) {
+  header {
+    margin-bottom: 120px;
+  }
+  .productos-plantas {
+    padding: 0px 40px;
+  }
+  .productos-plantas .lista-productos-plantas {
+    margin-top: 30px;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado {
+    width: 33.3%;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado h3 {
+    font-size: 2.5vw;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado p {
+    font-size: 2vw;
+    font-weight: bold;
+  }
+  .producto-destacados {
+    padding: 0px 40px;
+  }
+  .producto-destacados .menu-destacados {
+    display: inline-block;
+    margin: auto;
+    width: 80%;
+  }
+  .producto-destacados .menu-destacados ul li {
+    width: 25%;
+  }
+  .producto-destacados .menu-destacados ul li a {
+    font-size: 2vw;
+  }
+  .producto-destacados .lista-productos-destacados {
+    margin-top: 30px;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado {
+    width: 25%;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado h3 {
+    font-size: 2.5vw;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado p {
+    font-size: 2vw;
+    color: #006A71;
+    font-weight: bold;
+  }
+  footer .footer-informacion {
+    padding: 20px 20px;
+  }
+  footer .footer-informacion div {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    margin-bottom: 160px;
+  }
+  .productos-plantas {
+    padding: 0px 60px;
+  }
+  .productos-plantas h2 {
+    font-size: 5vw;
+    padding: 10px;
+  }
+  .productos-plantas .lista-productos-plantas {
+    margin-top: 30px;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado {
+    width: 33.3%;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado h3 {
+    font-size: 2.5vw;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado p {
+    font-size: 1.7vw;
+    font-weight: bold;
+  }
+  .producto-destacados {
+    padding: 0px 60px;
+  }
+  .producto-destacados .menu-destacados ul li {
+    width: 25%;
+  }
+  .producto-destacados .menu-destacados ul li a {
+    font-size: 2vw;
+    cursor: pointer;
+  }
+  .producto-destacados .lista-productos-destacados {
+    margin-top: 30px;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado {
+    width: 25%;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado h3 {
+    font-size: 2.5vw;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado p {
+    font-size: 2vw;
+    font-weight: bold;
+  }
+  footer .footer-informacion {
+    padding: 20px 60px;
+  }
+  footer .footer-informacion div {
+    width: 20%;
+    margin-bottom: 20px;
+  }
+  footer .footer-informacion div ul li {
+    font-size: 1.5vw;
+  }
+  footer .footer-informacion .logo {
+    display: flex;
+  }
+  footer .footer-informacion .menu-footer {
+    text-align: right;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    margin-bottom: 100px;
+  }
+  nav {
+    display: flex;
+    flex-flow: row;
+    padding: 0px 100px;
+  }
+  nav .res-menu {
+    display: none;
+  }
+  nav .logo {
+    display: flex;
+    width: 30%;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  nav .logo a {
+    font-size: 3.5vw;
+  }
+  nav .menu {
+    display: block;
+    width: 70%;
+    justify-content: right;
+  }
+  nav .menu ul {
+    display: flex;
+    flex-flow: row;
+    float: right;
+  }
+  nav .menu ul li {
+    border: 0px;
+    margin: 10px;
+  }
+  .productos-plantas {
+    padding: 0px 80px;
+  }
+  .productos-plantas h2 {
+    font-size: 4vw;
+  }
+  .productos-plantas .lista-productos-plantas {
+    margin-top: 30px;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado {
+    width: 25%;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado h3 {
+    font-size: 2.5vw;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado p {
+    font-size: 1.7vw;
+    font-weight: bold;
+  }
+  .producto-destacados {
+    padding: 0px 60px;
+  }
+  .producto-destacados .menu-destacados ul li {
+    width: 25%;
+  }
+  .producto-destacados .menu-destacados ul li a {
+    font-size: 2vw;
+  }
+  .producto-destacados .lista-productos-destacados {
+    margin-top: 30px;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado {
+    width: 25%;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado h3 {
+    font-size: 2.5vw;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado p {
+    font-size: 2vw;
+    font-weight: bold;
+  }
+  footer .footer-informacion {
+    padding: 20px 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .productos-plantas {
+    padding: 0px 100px;
+  }
+  .productos-plantas h2 {
+    font-size: 3vw;
+  }
+  .productos-plantas .lista-productos-plantas {
+    margin-top: 30px;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado {
+    width: 20%;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado h3 {
+    font-size: 2.5vw;
+  }
+  .productos-plantas .lista-productos-plantas .producto-destacado p {
+    font-size: 1.7vw;
+    font-weight: bold;
+  }
+  .producto-destacados {
+    padding: 0px 60px;
+  }
+  .producto-destacados h2 {
+    font-size: 4vw;
+    padding: 10px;
+  }
+  .producto-destacados .menu-destacados ul li {
+    width: 25%;
+  }
+  .producto-destacados .menu-destacados ul li a {
+    font-size: 2vw;
+  }
+  .producto-destacados .lista-productos-destacados {
+    margin-top: 30px;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado {
+    width: 25%;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado h3 {
+    font-size: 1.8vw;
+  }
+  .producto-destacados .lista-productos-destacados .producto-destacado p {
+    font-size: 2vw;
+    font-weight: bold;
+  }
+  footer .footer-informacion {
+    padding: 30px 100px;
+  }
+}

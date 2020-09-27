@@ -1,0 +1,109 @@
+$color-uno:#ecf4f3;
+$color-dos:#68B0AB;
+$color-tres: #006A71;
+$color-cuatro:#ff7e67;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+//Oculta el checkou que se va usar
+#toggle{
+    display:none;
+}
+//////Revisar si esta seleccionado/Marcado  
+#toggle:checked ~ .menu{
+    display: flex;
+    width: 100%;
+}
+header{
+    margin-bottom: 100px;
+}
+///Se dejan ocultos hasta que se active checkout
+.menu{
+    display: none;
+}
+nav{
+        padding: 10px 30px;
+        flex-flow: column;
+        text-align: center;
+        background-color: $color-dos;
+        box-sizing: border-box; ///Evita el desbode del elemento hijo
+        width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+        left: 0; /* Posicionamos la cabecera al lado izquierdo */
+        top: 0; /* Posicionamos la cabecera pegada arriba */
+        position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+        z-index: 100; 
+        .logo{  
+            a{
+                text-decoration: none;
+                font-size: 8vw;
+                color: $color-tres;
+                font-weight: bold;
+            }       
+        }
+        //Para centrar el botn del menu response
+        .res-menu{
+            display: flex;
+            display: inline-block;
+            margin:auto;
+            color: white;
+            font-size: 40px; 
+            user-select:none;         
+        }
+        .menu{
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            text-align: center;           
+            ul{
+                flex-flow: column;                 
+                list-style-type: none;
+                li{   
+                    color: white;  
+                    border-bottom: 2px solid rgb(255, 255, 255);
+                    padding: 10px 0px;  
+                    a{
+                        font-size: 25px
+                    }
+                }
+            }
+        }
+}
+@media (min-width: 992px){ 
+    header{
+        margin-bottom: 100px;
+    }   
+    nav{
+        display: flex;
+        flex-flow:row;
+        padding: 0px 100px;
+        .res-menu{
+            display: none;
+        }
+        .logo{            
+            display:flex;
+            width: 30%;
+            /* justify-content: center; */
+            align-items: center;
+            a{
+                font-size: 3.5vw;
+            }
+        }
+        .menu{
+            display:block;
+            width: 70%;
+            justify-content: right;    
+            ul {
+                display: flex;
+                flex-flow: row;
+                float: right;
+                li{
+                    border: 0px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}

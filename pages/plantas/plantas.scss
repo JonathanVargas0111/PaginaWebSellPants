@@ -1,0 +1,511 @@
+$color-uno:#ecf4f3;
+$color-dos:#68B0AB;
+$color-tres: #006A71;
+$color-cuatro:#ff7e67;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: $color-uno;
+}
+//Oculta el checkou que se va usar
+#toggle{
+    display:none;
+}
+//////Revisar si esta seleccionado/Marcado  
+#toggle:checked ~ .menu{
+    display: flex;
+    width: 100%;
+}
+header{
+    margin-bottom: 100px;
+}
+///Se dejan ocultos hasta que se active checkout
+.menu{
+    display: none;
+}
+nav{
+        padding: 10px 30px;
+        flex-flow: column;
+        text-align: center;
+        background-color: $color-dos;
+        box-sizing: border-box; ///Evita el desbode del elemento hijo
+        width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+        left: 0; /* Posicionamos la cabecera al lado izquierdo */
+        top: 0; /* Posicionamos la cabecera pegada arriba */
+        position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+        z-index: 100; 
+        .logo{  
+            a{
+                text-decoration: none;
+                font-size: 8vw;
+                color: $color-tres;
+                font-weight: bold;
+            }       
+        }
+        //Para centrar el botn del menu response
+        .res-menu{
+            display: flex;
+            display: inline-block;
+            margin:auto;
+            color: white;
+            font-size: 40px; 
+            user-select:none;         
+        }
+        .menu{
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            text-align: center;           
+            ul{
+                flex-flow: column;                 
+                list-style-type: none;
+                li{   
+                    color: white;  
+                    border-bottom: 2px solid rgb(255, 255, 255);
+                    padding: 10px 0px;  
+                    a{
+                        font-size: 25px
+                    }
+                }
+            }
+        }
+}
+
+.productos-plantas{
+    margin-top: 50px; 
+    padding: 0px 1px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    h2{
+        font-size: 7vw;
+        padding: 10px;
+        color: $color-tres;
+    }   
+    .lista-productos-plantas{
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 10px;
+        .producto-destacado{
+            width: 50%;
+            text-align: center;
+            display: flex;
+            flex-flow: column;
+            padding: 0px 5px;
+            margin-bottom:25px;
+            img{
+                width: 100%;
+            }
+            h3{
+                font-size: 5vw;
+            }
+            p{
+                font-size: 4vw;
+                color: $color-tres;
+                font-weight: bold;
+            }
+        }        
+    }
+    .ver-mas{ 
+        a{
+            border: solid $color-cuatro 2px;
+            border-radius: 12px;
+            color: $color-cuatro;
+            text-decoration: none;
+            padding: 5px 25px;
+            cursor: pointer;
+        }
+    }
+}
+
+.producto-destacados{
+    padding: 0px 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 50px;
+    h2{
+        font-size: 6vw;
+        padding: 10px;
+        color: $color-tres;
+    }
+    .menu-destacados{  
+        display:block;
+            width: 100%;
+            justify-content: right;       
+        ul{
+            display: flex;
+            flex-flow: row wrap;
+            li{
+                width: 50%;
+                list-style-type: none;
+                margin-bottom: 10px;
+                a{
+                    font-size: 4vw;
+                    border-bottom: solid 1px $color-tres;
+                    color: $color-cuatro;
+                    
+                }
+            }
+        }
+    }    
+    .lista-productos-destacados{
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 20px;
+        .producto-destacado{
+            width: 25%;
+            text-align: center;
+            display: flex;
+            flex-flow: column;
+            padding: 0px 10px;
+            margin-bottom:25px;
+            img{
+                width: 100%;
+            }
+            h3{
+                font-size: 3vw;
+            }
+            p{
+                font-size: 3vw;
+                color: $color-tres;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+footer{
+    .footer-informacion{
+        padding: 20px 10px;
+        display: flex;
+        flex-flow:row wrap;
+        background-color:$color-tres;
+        color: white;
+        div{            
+            width: 50%;
+            text-align: center;
+            margin-bottom: 20px;
+            h3{
+                margin-bottom: 10px;
+            }
+            ul{
+                list-style-type: none;
+                padding: 0px; 
+                li{
+                    font-size: 3.3vw;
+                }               
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .logo{
+            display: none;
+        }
+        .menu-footer{
+            a{
+                font-size: 20px;
+            }
+        }
+    }
+    .copy-right{
+        text-align: center;
+        background-color: gray;
+        padding: 5px;
+    }
+}
+
+@media (min-width: 480px){
+    header{
+        margin-bottom: 120px;
+    }
+    .productos-plantas{        
+        padding: 0px 40px;           
+        .lista-productos-plantas{ 
+            margin-top: 30px;           
+            .producto-destacado{
+                width: 33.3%;               
+                h3{
+                    font-size: 2.5vw;
+                }
+                p{
+                    font-size: 2vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    
+    .producto-destacados{
+        padding: 0px 40px;   
+        .menu-destacados{  
+                display: inline-block;
+                margin:auto;
+                width: 80%;
+            ul{
+                li{
+                    width: 25%; 
+                    a{
+                        font-size: 2vw;
+                    }  
+                }
+            }
+        }    
+        .lista-productos-destacados{ 
+            margin-top: 30px;           
+            .producto-destacado{
+                width: 25%;               
+                h3{
+                    font-size: 2.5vw;
+                }
+                p{
+                    font-size: 2vw;
+                    color:$color-tres;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    footer{       
+        .footer-informacion{
+            padding: 20px 20px;
+            div{            
+                width: 50%; 
+                margin-bottom: 20px;  
+                            
+            }
+        }
+    }  
+
+}
+
+@media (min-width: 768px){ 
+    header{
+        margin-bottom: 160px;
+    }
+    .productos-plantas{        
+        padding: 0px 60px; 
+        h2{
+            font-size: 5vw;
+            padding: 10px;
+        }          
+        .lista-productos-plantas{ 
+            margin-top: 30px;           
+            .producto-destacado{
+                width: 33.3%;               
+                h3{
+                    font-size: 2.5vw;
+                }
+                p{
+                    font-size: 1.7vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .producto-destacados{
+        padding: 0px 60px;   
+        .menu-destacados{  
+            ul{
+                li{
+                    width: 25%; 
+                    a{
+                        font-size: 2vw;
+                        cursor: pointer;
+                    }  
+                }
+            }
+        }    
+        .lista-productos-destacados{ 
+            margin-top: 30px;           
+            .producto-destacado{
+                width: 25%;               
+                h3{
+                    font-size: 2.5vw;
+                }
+                p{
+                    font-size: 2vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    footer{        
+        .footer-informacion{
+            padding: 20px 60px;
+            div{            
+                width: 20%; 
+                margin-bottom: 20px; 
+                ul{
+                    li{
+                        font-size: 1.5vw;
+                    }
+                }              
+            }
+            .logo{
+                display: flex;
+            }
+            .menu-footer{
+                text-align: right;
+            }
+        }
+    } 
+}
+
+@media (min-width: 992px){  
+    header{
+        margin-bottom: 100px;
+    }
+    nav{
+        display: flex;
+        flex-flow:row;
+        padding: 0px 100px;
+        .res-menu{
+            display: none;
+        }
+        .logo{            
+            display:flex;
+            width: 30%;
+            /* justify-content: center; */
+            align-items: center;
+            a{
+                font-size: 3.5vw;
+            }
+        }
+        .menu{
+            display:block;
+            width: 70%;
+            justify-content: right;    
+            ul {
+                display: flex;
+                flex-flow: row;
+                float: right;
+                li{
+                    border: 0px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    .productos-plantas{        
+        padding: 0px 80px; 
+        h2{
+            font-size: 4vw;
+        }          
+        .lista-productos-plantas{ 
+            margin-top: 30px;           
+            .producto-destacado{
+                width: 25%;               
+                h3{
+                    font-size: 2.5vw;
+                }
+                p{
+                    font-size: 1.7vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .producto-destacados{
+        padding: 0px 60px;   
+        .menu-destacados{  
+            ul{
+                li{
+                    width: 25%; 
+                    a{
+                        font-size: 2vw;
+                    }  
+                }
+            }
+        }    
+        .lista-productos-destacados{ 
+            margin-top: 30px;           
+            .producto-destacado{
+                width: 25%;               
+                h3{
+                    font-size: 2.5vw;
+                }
+                p{
+                    font-size: 2vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    footer{        
+        .footer-informacion{
+            padding: 20px 80px;
+        }
+    }  
+}
+
+@media (min-width: 1200px){
+    .productos-plantas{        
+        padding: 0px 100px; 
+        h2{
+            font-size: 3vw;
+        }          
+        .lista-productos-plantas{ 
+            margin-top: 30px;           
+            .producto-destacado{
+                width: 20%;               
+                h3{
+                    font-size: 2.5vw;
+                }
+                p{
+                    font-size: 1.7vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .producto-destacados{
+        padding: 0px 60px; 
+        h2{
+            font-size: 4vw;
+            padding: 10px;
+        }  
+        .menu-destacados{  
+            ul{
+                li{
+                    width: 25%; 
+                    a{
+                        font-size: 2vw;
+                    }  
+                }
+            }
+        }    
+        .lista-productos-destacados{ 
+            margin-top: 30px;           
+            .producto-destacado{
+                width: 25%;               
+                h3{
+                    font-size: 1.8vw;
+                }
+                p{
+                    font-size: 2vw;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    footer{        
+        .footer-informacion{
+            padding: 30px 100px;
+        }
+    } 
+}

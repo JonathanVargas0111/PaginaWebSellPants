@@ -1,0 +1,116 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked ~ .menu {
+  display: flex;
+  width: 100%;
+}
+
+header {
+  margin-bottom: 100px;
+}
+
+.menu {
+  display: none;
+}
+
+nav {
+  padding: 10px 30px;
+  flex-flow: column;
+  text-align: center;
+  background-color: #68B0AB;
+  box-sizing: border-box;
+  width: 100%;
+  /* hacemos que la cabecera ocupe el ancho completo de la página */
+  left: 0;
+  /* Posicionamos la cabecera al lado izquierdo */
+  top: 0;
+  /* Posicionamos la cabecera pegada arriba */
+  position: fixed;
+  /* Hacemos que la cabecera tenga una posición fija */
+  z-index: 100;
+}
+
+nav .logo a {
+  text-decoration: none;
+  font-size: 8vw;
+  color: #006A71;
+  font-weight: bold;
+}
+
+nav .res-menu {
+  display: flex;
+  display: inline-block;
+  margin: auto;
+  color: white;
+  font-size: 40px;
+  user-select: none;
+}
+
+nav .menu {
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+}
+
+nav .menu ul {
+  flex-flow: column;
+  list-style-type: none;
+}
+
+nav .menu ul li {
+  color: white;
+  border-bottom: 2px solid white;
+  padding: 10px 0px;
+}
+
+nav .menu ul li a {
+  font-size: 25px;
+}
+
+@media (min-width: 992px) {
+  header {
+    margin-bottom: 100px;
+  }
+  nav {
+    display: flex;
+    flex-flow: row;
+    padding: 0px 100px;
+  }
+  nav .res-menu {
+    display: none;
+  }
+  nav .logo {
+    display: flex;
+    width: 30%;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  nav .logo a {
+    font-size: 3.5vw;
+  }
+  nav .menu {
+    display: block;
+    width: 70%;
+    justify-content: right;
+  }
+  nav .menu ul {
+    display: flex;
+    flex-flow: row;
+    float: right;
+  }
+  nav .menu ul li {
+    border: 0px;
+    margin: 10px;
+  }
+}
